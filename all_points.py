@@ -2,6 +2,7 @@ import pandas as pd
 import folium
 import time
 from colour import Color
+import os
 
 
 if __name__ == '__main__':
@@ -82,6 +83,7 @@ if __name__ == '__main__':
     for indx, row in centroids.iterrows():
         folium.Circle((row['Latitude_C'], row['Longitude_C']), radius=row['Distances'], color='#cf0a0a').add_to(zipmap)
 
-    zipmap.save('all_points.html')
+    os.makedirs('../html/', exist_ok=True)
+    zipmap.save('../html/all_points.html')
     end = time.time()
     print('Tiempo transcurrido para la creación del mapa: ', end - start)
