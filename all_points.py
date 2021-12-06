@@ -17,7 +17,7 @@ if __name__ == '__main__':
     # Dataframe con los centroides y radios de cada cluster
     centroids = pd.read_csv('../Datasets/circulos_mean.csv')
     # Dataframe con los puntos (delitos) y su ubicación
-    points = pd.read_csv('../Datasets/prueba.csv')
+    points = pd.read_csv('../Datasets/poligonos.csv')
     # Dataframe con los KPI por clúser, utlizado para calcular el número de delitos de cada cluster
     kpis = pd.read_csv('../Datasets/df_kpi.csv')
     # Media para controlar el tiempo de ejecución
